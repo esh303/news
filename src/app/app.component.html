@@ -1,0 +1,86 @@
+<nav class="navbar navbar-expand-lg bg-light" class=" navbar navbar-expand-lg navbar-dark navbar-custom">
+  <div class="container-fluid text-center">
+    <a class="navbar-brand" href="#">News</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+      <ul class="nav justify-content-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            WORLD
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">AFRICA</a></li>
+            <li><a class="dropdown-item" href="#">AUSTRLIA</a></li>
+            <li><a class="dropdown-item" href="#">EUROPE</a></li>
+            <li><a class="dropdown-item" href="#">US & CANADA</a></li>
+            <li><a class="dropdown-item" href="#">LATIN AMERICA</a></li>
+            <li><a class="dropdown-item" href="#">MIDDLE EAST</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ASIA
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">ASIA</a></li>
+            <li><a class="dropdown-item" href="#">INDIA</a></li>
+            <li><a class="dropdown-item" href="#">CHINA</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ENTERTAINMENT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">SPORTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">SCIENCE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">HEALTH</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">PHOTOS</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<link href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" rel="stylesheet"/>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+
+<div class="flex justify-center" id="cars" v-cloak>
+    
+    <div class="container mh0 w-100 container-height" >
+       
+        <div class="container pa0 flex justify-center ">
+            <div class="card-columns card-columns-2 card-columns-md-3  ">
+                <div class="card mv2 rmunderline" *ngFor="let news of result">
+                  <a href="{{news.url}}" > <img src="{{news.urlToImage}}" class="card-img-top" style="width: 259px;height :180px" alt="Mazda hatchback"> 
+                        
+                    <div class="card-body">
+                        <h5 class="card-title">{{news.title}}</h5>
+                        <p class="card-text">{{news.content}}.</p>
+                       <small class="text-muted">{{news.publishedAt}}</small>
+                    </div></a>                                 
+                </div>               
+       
+</div>
+        
+    </div>
+</div>
+<div class="row">
+  <div class="col-sm-10">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Ads</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+<router-outlet></router-outlet>
